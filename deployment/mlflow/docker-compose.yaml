@@ -4,5 +4,7 @@ services:
     image: ghcr.io/mlflow/mlflow:latest
     ports:
       - "5555:5000"
+    environment:
+      - MLFLOW_SERVER_ALLOWED_HOSTS=*
     command: mlflow server --host 0.0.0.0 --backend-store-uri sqlite:///mlflow.db --default-artifact-root /tmp/mlruns
     container_name: mlflow-tracking-server
