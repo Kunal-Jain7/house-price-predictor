@@ -96,7 +96,7 @@ If you prefer an interactive experience, launch JupyterLab with:
 ```bash
 uv python -m jupyterlab
 # or
-python -m jupyterlab
+python -m jupyterlab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
 ```
 
 ---
